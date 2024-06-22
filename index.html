@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="head-container">
+        <h2>To Do List</h2>
+        <i class="bx bxs-notepad"></i>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Write your Task" />
+        <button>Add</button>
+      </div>
+
+      <div class="task-list">
+        <div class="task">
+          <div class="task-name">
+            <i class="bx bx-circle"></i>
+            <p>Create Video</p>
+          </div>
+          <div class="task-edit">
+            <i class="bx bxs-edit-alt"></i>
+            <i class="bx bxs-x-circle"></i>
+          </div>
+        </div>
+        <div class="task">
+          <div class="task-name">
+            <i class="bx bx-circle"></i>
+            <p>Create Video</p>
+          </div>
+          <div class="task-edit">
+            <i class="bx bxs-edit-alt"></i>
+            <i class="bx bxs-x-circle"></i>
+          </div>
+        </div>
+        <div class="task">
+          <div class="task-name">
+            <i class="bx bx-circle"></i>
+            <p>Create Video</p>
+          </div>
+          <div class="task-edit">
+            <i class="bx bxs-edit-alt"></i>
+            <i class="bx bxs-x-circle"></i>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="complete-task-list">
+        <div class="task">
+          <div class="task-name">
+            <i class="bx bxs-check-circle"></i>
+            <p><s>Create Video</s></p>
+          </div>
+          <div class="task-edit">
+            <i class="bx bxs-edit-alt"></i>
+            <i class="bx bxs-x-circle"></i>
+          </div>
+        </div>
+
+        <div class="task">
+          <div class="task-name">
+            <i class="bx bxs-check-circle"></i>
+            <p><s>Create Video</s></p>
+          </div>
+          <div class="task-edit">
+            <i class="bx bxs-edit-alt"></i>
+            <i class="bx bxs-x-circle"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button>Mark Complete</button>
+        <button>Mark Incomplete</button>
+        <button id="clear-btn">Clear All</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

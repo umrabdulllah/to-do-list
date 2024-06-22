@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2b383b, #aac8e2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 600px;
+  width: 500px;
+  background-color: #ededed;
+  border-radius: 24px;
+  box-shadow: 0.5px 0.5px 10px #202222;
+}
+
+.head-container {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  padding: 48px 24px 32px;
+}
+
+.head-container h2 {
+  font-size: 36px;
+  color: #202222;
+}
+
+.head-container i {
+  font-size: 36px;
+  color: #202222;
+}
+
+.search-container {
+  width: 90%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cfcfcf;
+}
+
+.search-container input {
+  height: 56px;
+  background-color: #cfcfcf;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding-left: 16px;
+  cursor: cell;
+}
+
+.search-container input::placeholder {
+  color: #3f4a4a;
+  font-weight: 500;
+}
+
+.search-container button {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #202222;
+  height: 56px;
+  width: 108px;
+  border-radius: 50px;
+  border: none;
+}
+
+.task-list {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px 32px 8px;
+}
+.complete-task-list {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 32px 32px;
+}
+
+.task {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+
+.task-name i {
+  font-size: 24px;
+  color: #202222;
+}
+
+.task-name p {
+  font-size: 16px;
+}
+
+.task-edit {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 24px;
+}
+
+.task-edit i {
+  font-size: 24px;
+}
+
+.button-group {
+  padding: 10px 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-group button {
+  border: none;
+  background-color: #cfcfcf;
+  padding: 15px;
+  border-radius: 50px;
+  color: #202222;
+  font-weight: 500;
+}
+
+#clear-btn {
+  background-color: #202222;
+  color: #fff;
+}
+.divider {
+  width: 80%;
+  border: 1px solid #ccc;
+  margin: 16px 0;
+}
