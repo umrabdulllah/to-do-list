@@ -18,38 +18,18 @@
       </div>
 
       <div class="search-container">
-        <input type="text" placeholder="Write your Task" />
-        <button>Add</button>
+        <input id="task-input" type="text" placeholder="Write your Task" />
+        <button onclick="addTask()">Add</button>
       </div>
 
-      <div class="task-list">
+      <div id="task-list" class="task-list">
         <div class="task">
           <div class="task-name">
             <i class="bx bx-circle"></i>
             <p>Create Video</p>
           </div>
           <div class="task-edit">
-            <i class="bx bxs-edit-alt"></i>
-            <i class="bx bxs-x-circle"></i>
-          </div>
-        </div>
-        <div class="task">
-          <div class="task-name">
-            <i class="bx bx-circle"></i>
-            <p>Create Video</p>
-          </div>
-          <div class="task-edit">
-            <i class="bx bxs-edit-alt"></i>
-            <i class="bx bxs-x-circle"></i>
-          </div>
-        </div>
-        <div class="task">
-          <div class="task-name">
-            <i class="bx bx-circle"></i>
-            <p>Create Video</p>
-          </div>
-          <div class="task-edit">
-            <i class="bx bxs-edit-alt"></i>
+            <i onclick="updateTask()" class="edit-option bx bxs-edit-alt"></i>
             <i class="bx bxs-x-circle"></i>
           </div>
         </div>
@@ -68,23 +48,12 @@
             <i class="bx bxs-x-circle"></i>
           </div>
         </div>
-
-        <div class="task">
-          <div class="task-name">
-            <i class="bx bxs-check-circle"></i>
-            <p><s>Create Video</s></p>
-          </div>
-          <div class="task-edit">
-            <i class="bx bxs-edit-alt"></i>
-            <i class="bx bxs-x-circle"></i>
-          </div>
-        </div>
       </div>
 
       <div class="button-group">
         <button>Mark Complete</button>
         <button>Mark Incomplete</button>
-        <button id="clear-btn">Clear All</button>
+        <button id="clear-btn" onclick="clearTasks()">Clear All</button>
       </div>
     </div>
 

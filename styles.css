@@ -63,7 +63,7 @@ body {
   outline: none;
   border-radius: 50px;
   padding-left: 16px;
-  cursor: cell;
+  cursor: text;
 }
 
 .search-container input::placeholder {
@@ -81,6 +81,7 @@ body {
   width: 108px;
   border-radius: 50px;
   border: none;
+  cursor: pointer;
 }
 
 .task-list {
@@ -149,6 +150,7 @@ body {
   border-radius: 50px;
   color: #202222;
   font-weight: 500;
+  cursor: pointer;
 }
 
 #clear-btn {
