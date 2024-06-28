@@ -21,12 +21,12 @@ body {
   align-items: center;
   justify-content: start;
   height: 600px;
-  width: 500px;
+  max-height: 800px;
+  min-width: 500px;
   background-color: #ededed;
   border-radius: 24px;
   box-shadow: 0.5px 0.5px 10px #202222;
 }
-
 .head-container {
   width: 100%;
   display: flex;
@@ -71,7 +71,8 @@ body {
   font-weight: 500;
 }
 
-.search-container button {
+.search-container .add-task,
+.search-container .update-task {
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -91,6 +92,8 @@ body {
   justify-content: center;
   gap: 16px;
   padding: 32px 32px 8px;
+  max-height: 300px;
+  overflow-y: auto;
 }
 .complete-task-list {
   width: 90%;
@@ -99,6 +102,8 @@ body {
   justify-content: center;
   gap: 16px;
   padding: 8px 32px 32px;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .task {
@@ -118,6 +123,7 @@ body {
 .task-name i {
   font-size: 24px;
   color: #202222;
+  cursor: pointer;
 }
 
 .task-name p {
@@ -133,6 +139,7 @@ body {
 
 .task-edit i {
   font-size: 24px;
+  cursor: pointer;
 }
 
 .button-group {
@@ -156,6 +163,7 @@ body {
 #clear-btn {
   background-color: #202222;
   color: #fff;
+  font-weight: 600;
 }
 .divider {
   width: 80%;
