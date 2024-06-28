@@ -174,7 +174,6 @@ body {
 }
 
 .credits {
-  position: fixed;
   bottom: 64px;
   display: flex;
   flex-direction: column;
