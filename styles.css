@@ -11,6 +11,8 @@ body {
   min-height: 100vh;
   background: linear-gradient(135deg, #2b383b, #aac8e2);
   display: flex;
+  flex-direction: column;
+  gap: 64px;
   justify-content: center;
   align-items: center;
 }
@@ -143,7 +145,7 @@ body {
 }
 
 .button-group {
-  padding: 10px 40px;
+  padding: 5px 40px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -169,4 +171,30 @@ body {
   width: 80%;
   border: 1px solid #ccc;
   margin: 16px 0;
+}
+
+.credits {
+  position: fixed;
+  bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.credits h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.social-links a {
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #202222;
 }

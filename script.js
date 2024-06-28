@@ -3,8 +3,9 @@ const taskList = document.querySelector(".task-list");
 const taskBtn = document.querySelector(".add-task");
 const completeTaskList = document.querySelector(".complete-task-list");
 
-let taskArray = [];
-let completeTaskArray = [];
+let taskArray = JSON.parse(localStorage.getItem("taskArray")) || [];
+let completeTaskArray =
+  JSON.parse(localStorage.getItem("completeTaskArray")) || [];
 let isEditing = false;
 let isCompletedTaskUpdate = false;
 let currentIndex = -1;
@@ -54,6 +55,7 @@ function renderTaskList() {
   }
   taskList.innerHTML = htmlContent;
   inputBox.value = "";
+  localStorage.setItem("taskArray", JSON.stringify(taskArray));
 }
 
 function editTask(index) {
@@ -106,6 +108,7 @@ function renderCompleteTaskList() {
     `;
   }
   completeTaskList.innerHTML = htmlContent;
+  localStorage.setItem("completeTaskArray", JSON.stringify(completeTaskArray));
 }
 
 function clearTasks() {
@@ -136,3 +139,6 @@ function markIncomplete(index) {
   deleteCompleteTask(index);
   renderTaskList();
 }
+
+renderCompleteTaskList();
+renderTaskList();
