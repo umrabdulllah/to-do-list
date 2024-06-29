@@ -126,7 +126,7 @@ function markComplete() {
   renderCompleteTaskList();
 }
 
-function markIncomplete() {
+function markIncompleteList() {
   for (let i = completeTaskArray.length - 1; i >= 0; i--) {
     taskArray.push(completeTaskArray[i]);
     deleteCompleteTask(i);

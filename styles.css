@@ -12,7 +12,7 @@ body {
   background: linear-gradient(135deg, #2b383b, #aac8e2);
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 32px;
   justify-content: center;
   align-items: center;
 }
@@ -23,7 +23,7 @@ body {
   align-items: center;
   justify-content: start;
   height: 600px;
-  max-height: 800px;
+  max-height: 600px;
   min-width: 500px;
   background-color: #ededed;
   border-radius: 24px;
@@ -93,8 +93,8 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 16px;
-  padding: 32px 32px 8px;
-  max-height: 300px;
+  padding: 8px 32px 32px;
+  flex-grow: 1;
   overflow-y: auto;
 }
 .complete-task-list {
@@ -104,7 +104,7 @@ body {
   justify-content: center;
   gap: 16px;
   padding: 8px 32px 32px;
-  max-height: 300px;
+  flex-grow: 1;
   overflow-y: auto;
 }
 
@@ -145,8 +145,9 @@ body {
 }
 
 .button-group {
-  padding: 5px 40px;
-  width: 100%;
+  margin-top: auto;
+  width: 80%;
+  margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -171,18 +172,6 @@ body {
   width: 80%;
   border: 1px solid #ccc;
   margin: 16px 0;
-}
-
-.credits {
-  bottom: 64px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.credits h5 {
-  font-size: 20px;
-  font-weight: 600;
 }
 
 .social-links {
