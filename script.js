@@ -39,12 +39,13 @@ function addTask() {
 
 function renderTaskList() {
   let htmlContent = "";
-  for (let i = 0; i < taskArray.length; i++) {
+
+  taskArray.forEach(function (taskName, i) {
     htmlContent += `
     <div class="task">
       <div class="task-name">
       <i onclick = 'completeTask(${i})' class="bx bx-circle"></i>
-        <p>${taskArray[i]}</p>
+        <p>${taskName}</p>
       </div>
       <div class="task-edit">
         <i onclick='editTask(${i})' class="edit-option bx bxs-edit-alt"></i>
@@ -52,7 +53,7 @@ function renderTaskList() {
       </div>
     </div>
      `;
-  }
+  });
   taskList.innerHTML = htmlContent;
   inputBox.value = "";
   localStorage.setItem("taskArray", JSON.stringify(taskArray));
@@ -93,12 +94,12 @@ function editCompletedTask(index) {
 
 function renderCompleteTaskList() {
   let htmlContent = "";
-  for (let i = 0; i < completeTaskArray.length; i++) {
+  completeTaskArray.forEach(function (taskName, i) {
     htmlContent += `
     <div class="task">
       <div class="task-name">
         <i onclick = 'markIncomplete(${i})' class="bx bxs-check-circle"></i>
-        <p><s>${completeTaskArray[i]}</s></p>
+        <p><s>${taskName}</s></p>
       </div>
       <div class="task-edit">
         <i onclick = 'editCompletedTask(${i})' class="bx bxs-edit-alt"></i>
@@ -106,7 +107,7 @@ function renderCompleteTaskList() {
       </div>
     </div>
     `;
-  }
+  });
   completeTaskList.innerHTML = htmlContent;
   localStorage.setItem("completeTaskArray", JSON.stringify(completeTaskArray));
 }
