@@ -18,17 +18,8 @@
       </div>
 
       <div class="search-container">
-        <input
-          onkeydown="
-        if(event.key === 'Enter'){
-          addTask();
-        }
-        "
-          class="task-input"
-          type="text"
-          placeholder="Write your Task"
-        />
-        <button class="add-task" onclick="addTask()">Add</button>
+        <input class="task-input" type="text" placeholder="Write your Task" />
+        <button class="add-task">Add</button>
       </div>
 
       <div class="task-list" class="task-list"></div>
@@ -38,9 +29,9 @@
       <div class="complete-task-list"></div>
 
       <div class="button-group">
-        <button onclick="markComplete()">Mark Complete</button>
-        <button onclick="markIncompleteList()">Mark Incomplete</button>
-        <button id="clear-btn" onclick="clearTasks()">Clear All</button>
+        <button class="mark-all-complete">Mark Complete</button>
+        <button class="mark-all-incomplete">Mark Incomplete</button>
+        <button id="clear-btn" class="clear-tasks">Clear All</button>
       </div>
     </div>
 

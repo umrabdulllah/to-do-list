@@ -10,6 +10,7 @@ let isEditing = false;
 let isCompletedTaskUpdate = false;
 let currentIndex = -1;
 
+taskBtn.addEventListener("click", addTask);
 function addTask() {
   const inputValue = inputBox.value;
   if (inputValue === "") {
@@ -37,10 +38,14 @@ function addTask() {
   }
 }
 
+inputBox.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") addTask();
+});
+
 function renderTaskList() {
   let htmlContent = "";
 
-  taskArray.forEach(function (taskName, i) {
+  taskArray.forEach((taskName, i) => {
     htmlContent += `
     <div class="task">
       <div class="task-name">
@@ -94,7 +99,7 @@ function editCompletedTask(index) {
 
 function renderCompleteTaskList() {
   let htmlContent = "";
-  completeTaskArray.forEach(function (taskName, i) {
+  completeTaskArray.forEach((taskName, i) => {
     htmlContent += `
     <div class="task">
       <div class="task-name">
@@ -112,28 +117,31 @@ function renderCompleteTaskList() {
   localStorage.setItem("completeTaskArray", JSON.stringify(completeTaskArray));
 }
 
-function clearTasks() {
+const clearTaskBtn = document.querySelector(".clear-tasks");
+clearTaskBtn.addEventListener("click", () => {
   taskArray.splice(0, taskArray.length);
   completeTaskArray.splice(0, completeTaskArray.length);
   renderTaskList();
   renderCompleteTaskList();
-}
+});
 
-function markComplete() {
+const markCompleteBtn = document.querySelector(".mark-all-complete");
+markCompleteBtn.addEventListener("click", () => {
   for (let i = taskArray.length - 1; i >= 0; i--) {
     completeTaskArray.push(taskArray[i]);
     deleteTask(i);
   }
   renderCompleteTaskList();
-}
+});
 
-function markIncompleteList() {
+const markIncompleteBtn = document.querySelector(".mark-all-incomplete");
+markIncompleteBtn.addEventListener("click", () => {
   for (let i = completeTaskArray.length - 1; i >= 0; i--) {
     taskArray.push(completeTaskArray[i]);
     deleteCompleteTask(i);
   }
   renderTaskList();
-}
+});
 
 function markIncomplete(index) {
   taskArray.push(completeTaskArray[index]);
